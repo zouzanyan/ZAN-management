@@ -1,0 +1,2 @@
+# ZAN-managermentSystem
+ZAN-managermentSystem是一个通用的前后端分离的管理系统，基于SpringBoot和Vue开发。适用于个人或企业快速开发的基础项目架构
