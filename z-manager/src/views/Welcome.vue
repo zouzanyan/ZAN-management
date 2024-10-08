@@ -1,12 +1,49 @@
 <template>
-    <div>
 
-        <div style="font-size: 18px; margin: 10px 0; color: red;">欢迎来到ZAN通用管理系统</div>
-        <div style="font-size: 18px; margin: 10px 0;color: orange">欢迎来到ZAN通用管理系统</div>
-        <div style="font-size: 18px; margin: 10px 0;color: yellow">欢迎来到ZAN通用管理系统</div>
-        <div style="font-size: 18px; margin: 10px 0;color: green">欢迎来到ZAN通用管理系统</div>
-        <div style="font-size: 18px; margin: 10px 0;color: orange">欢迎来到ZAN通用管理系统</div>
-    </div>
+  <div class="container">
+    <h2>一、项目概述</h2>
+    <p>ZAN通用管理系统是一个采用前后端分离架构，使用 SpringBoot 和 Vue 从0-1编写的项目，保证所有组件纯净可控。旨在为个人开发者和组织提供高效、便捷的管理解决方案。</p>
+
+    <h2>二、技术架构</h2>
+    <p>前端使用 Vue.js，带来以下优势：</p>
+    <ul>
+      <li>强大的组件化开发模式，提升开发效率和代码可维护性。</li>
+      <li>响应式设计，适应各种设备屏幕，提供出色的用户体验。</li>
+      <li>丰富的 UI 库和插件可供选择，让界面更加美观和易用。</li>
+    </ul>
+    <p>后端基于 Spring Boot 框架：</p>
+    <ul>
+      <li>简化开发过程，快速搭建稳定可靠的服务。</li>
+      <li>强大的数据库访问层，支持多种数据库，方便数据存储和管理。</li>
+      <li>安全可靠的认证和授权机制，保障系统数据安全。</li>
+    </ul>
+
+    <h2>三、主要功能</h2>
+    <p>该系统具备以下核心功能：</p>
+    <ul>
+      <li>全面的用户管理，包括登录和个人信息管理，用户权限管理等。</li>
+      <li>高效的数据管理功能，可轻松录入、编辑和删除各类数据。</li>
+      <li>强大的查询和筛选功能，快速定位所需信息。</li>
+      <li>直观的报表和统计功能，为决策提供有力支持。</li>
+    </ul>
+
+    <h2>四、系统优势</h2>
+    <ul>
+      <li>高效性：优化的数据库设计和高效算法确保快速的数据处理。</li>
+      <li>易用性：简洁直观的用户界面，操作方便，无需专业技术知识即可上手。</li>
+      <li>可扩展性：模块化设计易于扩展和定制，满足不同业务需求。</li>
+      <li>安全性：严格的用户认证和授权机制，保障数据安全。</li>
+    </ul>
+
+    <h2>五、应用场景</h2>
+    <p>适用于多种场景，如企业内部管理、项目管理、客户关系管理系统开发的基础代码等。</p>
+
+    <h2>六、未来展望</h2>
+    <p>我将持续优化和完善该通用管理系统，不断提升性能和功能。同时，积极倾听用户反馈，改进用户体验，为用户提供更加优质的服务。</p>
+
+    <h2>七、联系方式</h2>
+    <p>QQ 1406823510</p>
+  </div>
 
 
 </template>
@@ -16,4 +53,36 @@
 
 </script>
 
-<style></style>
+<style>
+
+.container {
+  margin-top: 20px;
+  padding: 20px;
+  width: 80vh;
+  height: 50vh;
+  overflow: auto;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.50);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  list-style-type: disc;
+}
+
+</style>

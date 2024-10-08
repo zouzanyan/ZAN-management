@@ -1,7 +1,7 @@
 <!--suppress HtmlUnknownTag -->
 <template>
   <el-container class="home_container">
-    <el-header style="box-shadow: 0px 2px 6px rgba(0, 21, 41, .35);">
+    <el-header style="">
       <div class="home_title">ZAN通用管理系统</div>
       <div class="home_userinfoContainer">
         <el-avatar class="el-icon-user-solid"></el-avatar>
@@ -25,7 +25,6 @@
             <i class="el-icon-menu"></i>
             <span slot="title">系统主页</span>
           </el-menu-item>
-
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-goods"></i>
@@ -67,11 +66,11 @@
             <span slot="title">关于</span>
           </el-menu-item>
         </el-menu>
-<!--        <div><span></span></div>-->
+        <!--        <div><span></span></div>-->
       </el-aside>
 
-      <el-container>
-        <el-main height="">
+      <el-container style="height: 90%">
+        <el-main class="home_main">
           <!-- 面包屑导航 -->
           <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/home' }">主页</el-breadcrumb-item>
@@ -80,7 +79,7 @@
           <!-- main区域用于route到不同的页面 -->
           <router-view></router-view>
         </el-main>
-        <el-footer height="">
+        <el-footer>
           <div></div>
         </el-footer>
       </el-container>
@@ -152,9 +151,6 @@ export default {
 
 </script>
 <style>
-/* .el-header {
-    background-color: #0A64A4;
-} */
 
 .home_container {
   height: 100%;
@@ -162,6 +158,11 @@ export default {
   top: 0px;
   left: 0px;
   width: 100%;
+  overflow: hidden;
+}
+
+.home_main{
+  height: 100%;
 }
 
 .el-header {
@@ -171,6 +172,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 2px 6px rgba(0, 21, 41, .35);
+
 }
 
 .home_userinfo {
@@ -178,13 +181,14 @@ export default {
   cursor: pointer;
 }
 
-
 .el-aside {
   background-color: gray;
   height: 100vh;
+  overflow-y: auto;
 }
 
 .el-menu {
+  height: 100%;
   border-right: none !important;
 }
 </style>

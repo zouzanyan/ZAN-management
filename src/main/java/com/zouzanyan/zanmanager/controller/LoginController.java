@@ -7,6 +7,7 @@ import com.zouzanyan.zanmanager.entity.Employee;
 import com.zouzanyan.zanmanager.service.EmployeeService;
 import com.zouzanyan.zanmanager.service.RoleAuthorityService;
 import com.zouzanyan.zanmanager.util.CookieUtil;
+import com.zouzanyan.zanmanager.util.PasswordUtils;
 import com.zouzanyan.zanmanager.vo.EmployeeLoginVo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,13 +43,13 @@ public class LoginController {
             return map;
         }
         //判断密码是否正确
-        if (!one.getPassword().equals(employee.getPassword())) {
+        if (!PasswordUtils.verifyPassword(employee.getPassword(), one.getPassword())) {
             map.put("code", -2);
             return map;
         }
         List<String> authorities = roleAuthorityService.getAuthorityFromEmployeeId(one.getEmployeeId());
         EmployeeLoginVo employeeLoginVo = new EmployeeLoginVo();
-        employeeLoginVo.setAuthorityControllerList(StringUtils.join(authorities,","));
+        employeeLoginVo.setAuthorityControllerList(StringUtils.join(authorities, ","));
         employeeLoginVo.setEmployeeId(one.getEmployeeId());
         map.put("code", 0);
         map.put("data", employeeLoginVo);
@@ -56,6 +57,7 @@ public class LoginController {
         // employeeId 唯一用户标识
         Integer employeeId = one.getEmployeeId();
         Cookie cookie = new Cookie("userinfo", CookieUtil.signValue(employeeId.toString()));
+        // 设置cookie有效期为一个月
         cookie.setMaxAge(60 * 60 * 24 * 30);
         httpServletResponse.addCookie(cookie);
         return map;
