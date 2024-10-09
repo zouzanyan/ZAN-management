@@ -12,9 +12,9 @@ window.axios = axios
 window.axios.defaults.withCredentials = true
 Vue.use(ElementUI, {size: 'small', zIndex: 3000});
 
-
-console.log('********* Cookie *************')
-console.log(document.cookie)
+//
+// console.log('********* Cookie *************')
+// console.log(document.cookie)
 
 
 new Vue({

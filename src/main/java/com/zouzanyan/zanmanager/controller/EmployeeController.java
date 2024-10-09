@@ -57,7 +57,8 @@ public class EmployeeController {
 
     @PostMapping("/save")
     public boolean save(@RequestBody Employee employee) {
-        employee.setPassword("123456");
+        // 默认密码1234
+        employee.setPassword("1234");
         employee.setStatus(1);
         return this.employeeService.save(employee);
     }

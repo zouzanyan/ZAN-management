@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zouzanyan</groupId>
-    <artifactId>ZAN-managermentSystem</artifactId>
+    <artifactId>ZAN-management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ZAN-managermentSystem</name>
-    <description>ZAN-Manager</description>
+    <name>ZAN-management</name>
+    <description>ZAN-Management</description>
 
 
     <properties>

@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         // 后端url
-        globalhost: 'http://192.168.1.27:8181/',
+        globalhost: webConfig.webApiBaseUrl,
 
     }, mutations: {
 

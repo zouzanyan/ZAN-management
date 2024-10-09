@@ -33,7 +33,7 @@ public class PasswordUtils {
 
 class aawdwad{
     public static void main(String[] args) {
-        System.out.println(PasswordUtils.generateSaltedHmacSha256("2"));
+        System.out.println(PasswordUtils.generateSaltedHmacSha256("123"));
         System.out.println(PasswordUtils.verifyPassword("1234", "h67YgOCyqK1nTEBl6Z0rYoQtdd2B2TVYrOShqby3lkk="));
     }
 }

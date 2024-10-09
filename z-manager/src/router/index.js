@@ -17,7 +17,6 @@ const routes = [
     {
         path: '/login',
         component: Login
-
     },
     {
         path: '/',
@@ -60,7 +59,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     base: process.env.BASE_URL,
     routes
 })
@@ -89,6 +88,5 @@ router.beforeEach((to, from, next) => {
     }
 
 );
-
 
 export default router

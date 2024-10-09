@@ -104,7 +104,7 @@ export default {
         document.cookie = "userinfo=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         // 清除 local里的权限数据
         localStorage.clear()
-        _this.$router.replace({path: '/login'})
+        _this.$router.replace({path: '/login'}).catch(err=>{})
       }).catch(() => {
         console.log('取消操作')
       })
